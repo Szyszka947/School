@@ -12,7 +12,7 @@ int nww(int a, int b) // funkcja wykonana na podstawie http://www.algorytm.edu.p
 	return (a * b) / nwd(a, b);
 }
 
-int* skrocUlamek(int licznik, int mianownik) // wskaünik, øeby moøna by≥o zwrÛciÊ tabele
+int* skrocUlamek(int licznik, int mianownik) // wska≈∫nik, ≈ºeby mo≈ºna by≈Ço zwr√≥ciƒá tabele
 {
 	return new int[2]{ nww(licznik, mianownik) / mianownik, nww(licznik, mianownik) / licznik };
 }
@@ -29,15 +29,14 @@ int main()
 	cout << "NWD(" << liczby[0] << ", " << liczby[1] << ") = " << nwd(liczby[0], liczby[1]) << "\n"
 		<< "NWW(" << liczby[0] << ", " << liczby[1] << ") = " << nww(liczby[0], liczby[1]) << "\n" << endl;
 
-	int licznik, mianownik;
 	cout << "Podaj licznik ulamka: ";
-	cin >> licznik;
+	cin >> liczby[0];
 	cout << "Podaj mianownik ulamka: ";
-	cin >> mianownik;
+	cin >> liczby[1];
 
-	int* skroconyUlamek = skrocUlamek(licznik, mianownik); // tutaj teø wskaünik, øeby moøna by≥o odebraÊ tabele od funkcji skrocUlamek
+	int* skroconyUlamek = skrocUlamek(liczby[0], liczby[1]); // tutaj te≈º wska≈∫nik, ≈ºeby mo≈ºna by≈Ço odebraƒá tabele od funkcji skrocUlamek
 
-	cout << "Ulamek w postaci skroconej:\nLicznik: " << skroconyUlamek[0] << "\nMianownik: " << skroconyUlamek[1] << endl;
+	cout << "\nUlamek w postaci skroconej:\nLicznik: " << skroconyUlamek[0] << "\nMianownik: " << skroconyUlamek[1] << endl;
 
 	return 0;
 }
